@@ -46,6 +46,7 @@ BST* BST ::Insert(BST* root, int value,string s)
 bool BST ::search(BST* root, int value, std::string pass) {
 	while(root != NULL) {
       if(root->data == value) {
+      	if(pass=="") return 1;
       	if(root->s==pass) return 1;
         return 0;
       	} 

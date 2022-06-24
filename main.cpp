@@ -21,7 +21,14 @@ int main() {
 				root=b.Insert(root,id,pass);
 				flag=1;
 			}
-			else b.Insert(root,id,pass);
+			else {
+				if(b.search(root,id,"")) {
+					cout<<"Already Registered";
+					getch();
+					continue;
+				}
+				b.Insert(root,id,pass);
+			}
 		}
 		else if(input=="Login"){
 			bool check=0;
